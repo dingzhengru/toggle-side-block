@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Toggle Side Block</title>
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <meta name=viewport content="width=720"> -->
+
+</head>
+<body>
+  <button onclick="toggleSideBlock(event)">Toggle</button>
+  <button onclick="showSideBlock()">Show</button>
+  <button onclick="hideSideBlock()">Hide</button>
+
+  <div class="side-block-toggle"> 
+    <div class="side-block-toggle-icon" onclick="toggleSideBlock(event)"></div>
+  </div>
+  
+  <div class="side-block">
+    <div class="side-block-wrapper">
+      <button>安裝應用程式</button>
+    </div>
+  </div>
+<script>
+
+  document.addEventListener('click', function(e) {
+    console.log('hide')
+    hideSideBlock()
+  })
+
+  function showSideBlock() {
+
+    event.stopPropagation()
+
+    const sideBlock = document.querySelector('.side-block')
+    sideBlock.classList.add('side-block-show')
+  }
+
+  function hideSideBlock() {
+    const sideBlock = document.querySelector('.side-block')
+    sideBlock.classList.remove('side-block-show')
+    console.log('remove')
+  }
+
+  function toggleSideBlock(event) {
+    // 為了不讓 body.click 被觸發 順序: 捕獲 body => 捕獲此元素(在這就不往後傳) => 冒泡此元素 => 冒泡 body
+    event.stopPropagation()
+
+    const sideBlock = document.querySelector('.side-block')
+    sideBlock.classList.toggle('side-block-show')
+  }
+</script>
+</body>
+</html>
