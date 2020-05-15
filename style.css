@@ -15,8 +15,8 @@ html{
 
   overflow-x: hidden;
   text-align: right;
-  background: black;
-  transition: all 0.5s;
+  background: transparent;
+  transition: all 0.3s;
   z-index: 9999;
 }
 
