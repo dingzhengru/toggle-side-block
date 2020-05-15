@@ -21,6 +21,7 @@
   
   <div class="side-block">
     <div class="side-block-wrapper">
+      <img src="./gear.png" width="25" height="25" onclick="toggleSideBlock(event)">
       <button>安裝應用程式</button>
     </div>
   </div>
@@ -48,7 +49,7 @@
     event.stopPropagation()
 
     const sideBlock = document.querySelector('.side-block')
-    sideBlock.classList.toggle('side-block-show')
+    sideBlock.classList.add('side-block-show')
   }
 </script>
 </body>

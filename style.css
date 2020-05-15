@@ -11,7 +11,7 @@ html{
 
 
   width: 0;
-  /*width: 50%;*/
+  width: 40%;
 
   overflow-x: hidden;
   text-align: right;
@@ -21,7 +21,7 @@ html{
 }
 
 .side-block-show {
-  width: 40%;
+  /*width: 40%;*/
   transition: all 0.5s;
 }
 
@@ -34,7 +34,8 @@ html{
   transform: translateY(-50%);
 }
 
-.side-block-wrapper button{
+.side-block-wrapper > button,
+.side-block-wrapper > img {
   display: inline-block;
   padding: 6px 12px;
   font-size: 1.2rem;
@@ -45,13 +46,20 @@ html{
   vertical-align: middle;
   cursor: pointer;
   background-image: none;
-  border-radius: 4px;
-  
-  font-weight: bold;
-
   color: #333;
   background-color: #fff;
   border: 1px solid #ccc;
+}
+
+.side-block-wrapper img {
+  padding: 7px 12px;
+  border-radius: 4px 0px 0px 4px;
+  margin-right: -4px;
+}
+
+.side-block-wrapper button{
+  border-radius: 0px 0px 0px 0px;
+  font-weight: bold;
 }
 
 .side-block-toggle {
@@ -66,6 +74,25 @@ html{
   text-align: right;
   background: transparent;
   z-index: -9999;
+}
+
+/*-----------------------------*/
+
+.side-block-toggle-icon {
+  position: absolute;
+  top: 30%;
+  right: 0;
+
+  width: 0;
+  height: 0;
+
+  border-style: solid;
+  border-width: 20px 50px 20px 0;
+  border-color: transparent #007bff transparent transparent;
+
+  /* 配合三角形參數 */
+  transform: translateY(-20px);
+  z-index: 9999;
 }
 
 .side-block-toggle-icon {
