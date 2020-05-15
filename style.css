@@ -7,22 +7,22 @@ html{
   top: 0;
   right: 0;
   height: 100%;
+  max-width: 50%;
+
 
   width: 0;
   /*width: 50%;*/
 
   overflow-x: hidden;
   text-align: right;
-  background: transparent;
+  background: black;
   transition: all 0.5s;
   z-index: 9999;
 }
 
 .side-block-show {
-  /*height: 100%;*/
   width: 40%;
   transition: all 0.5s;
-  /*transform: translate(0%);*/
 }
 
 .side-block-wrapper {
@@ -37,7 +37,6 @@ html{
 .side-block-wrapper button{
   display: inline-block;
   padding: 6px 12px;
-  /*margin: 0 3px 0 3px;*/
   font-size: 1.2rem;
   font-weight: 400;
   line-height: 1.42857143;
@@ -46,7 +45,6 @@ html{
   vertical-align: middle;
   cursor: pointer;
   background-image: none;
-  /*border: 1px solid transparent;*/
   border-radius: 4px;
   
   font-weight: bold;
@@ -67,7 +65,6 @@ html{
   overflow-x: hidden;
   text-align: right;
   background: transparent;
-  
   z-index: -9999;
 }
 
@@ -79,13 +76,11 @@ html{
   width: 0;
   height: 0;
 
-
   border-style: solid;
   border-width: 20px 50px 20px 0;
   border-color: transparent #007bff transparent transparent;
 
   /* 配合三角形參數 */
   transform: translateY(-20px);
-
   z-index: 9999;
 }

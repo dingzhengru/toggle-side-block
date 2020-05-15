@@ -27,7 +27,6 @@
 <script>
 
   document.addEventListener('click', function(e) {
-    console.log('hide')
     hideSideBlock()
   })
 
@@ -42,7 +41,6 @@
   function hideSideBlock() {
     const sideBlock = document.querySelector('.side-block')
     sideBlock.classList.remove('side-block-show')
-    console.log('remove')
   }
 
   function toggleSideBlock(event) {
