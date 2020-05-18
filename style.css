@@ -7,62 +7,81 @@ html{
   top: 0;
   right: 0;
   height: 100%;
-  max-width: 50%;
+  max-width: 100%;
 
-
-  width: 0;
-  width: 40%;
+  width: 60%;
 
   overflow-x: hidden;
   text-align: right;
   background: transparent;
-  transition: all 0.3s;
   z-index: 9999;
 }
 
 .side-block-show {
   /*width: 40%;*/
-  transition: all 0.5s;
+  /*transition: all 0.5s;*/
 }
 
 .side-block-wrapper {
-  margin: auto;
   position: absolute;
   top: 30%;
-  right: 0;
+  right: -2px;
   width: 100%;
   transform: translateY(-50%);
-}
-
-.side-block-wrapper > button,
-.side-block-wrapper > img {
-  display: inline-block;
-  padding: 6px 12px;
-  font-size: 1.2rem;
-  font-weight: 400;
-  line-height: 1.42857143;
-  text-align: center;
   white-space: nowrap;
+  overflow: hidden;
+  text-align: right;
+}
+
+.side-block-wrapper > .side-block-icon,
+.side-block-wrapper > .side-block-button {
   vertical-align: middle;
-  cursor: pointer;
-  background-image: none;
-  color: #333;
-  background-color: #fff;
+  display: inline-block;
+  font-size: 1.5rem;
+  color: black;
+  background-color: white;
   border: 1px solid #ccc;
+  cursor: pointer;
+  user-select: none;
+  /*font-weight: 400;*/
+  /*line-height: 1.42857143;*/
+  /*text-align: center;*/
+  /*white-space: nowrap;*/
 }
 
-.side-block-wrapper img {
-  padding: 7px 12px;
-  border-radius: 4px 0px 0px 4px;
-  margin-right: -4px;
+.side-block-wrapper > .side-block-icon:active,
+.side-block-wrapper > .side-block-button:active {
+  color: #333;
+  background-color: #d4d4d4;
+  border-color: #8c8c8c;
 }
 
-.side-block-wrapper button{
+.side-block-wrapper .side-block-icon {
+  padding: 12px;
+  margin-right: -5px;
+  width: auto;
+  height: 36px;
+}
+
+.side-block-wrapper .side-block-button{
+  width: 0px;
+  padding: 0;
+
+  height: 62px;  /*可用 JS 去處理和圖片大小一樣*/
+
   border-radius: 0px 0px 0px 0px;
-  font-weight: bold;
+  text-align: left;
+  transition: width 0.5s, padding 0s 0.2s;
 }
 
-.side-block-toggle {
+.side-block-wrapper .button-show{
+  width: 100%;
+  
+  padding: 6px;
+  transition: width 0.5s;
+}
+
+/*.side-block-toggle {
   position: fixed;
   top: 0;
   right: 0;
@@ -74,11 +93,11 @@ html{
   text-align: right;
   background: transparent;
   z-index: -9999;
-}
+}*/
 
 /*-----------------------------*/
 
-.side-block-toggle-icon {
+/*.side-block-toggle-icon {
   position: absolute;
   top: 30%;
   right: 0;
@@ -90,12 +109,11 @@ html{
   border-width: 20px 50px 20px 0;
   border-color: transparent #007bff transparent transparent;
 
-  /* 配合三角形參數 */
   transform: translateY(-20px);
   z-index: 9999;
-}
+}*/
 
-.side-block-toggle-icon {
+/*.side-block-toggle-icon {
   position: absolute;
   top: 30%;
   right: 0;
@@ -107,7 +125,6 @@ html{
   border-width: 20px 50px 20px 0;
   border-color: transparent #007bff transparent transparent;
 
-  /* 配合三角形參數 */
   transform: translateY(-20px);
   z-index: 9999;
-}
+}*/

@@ -15,41 +15,43 @@
   <button onclick="showSideBlock()">Show</button>
   <button onclick="hideSideBlock()">Hide</button> -->
 
-  <div class="side-block-toggle"> 
+  <!-- <div class="side-block-toggle"> 
     <div class="side-block-toggle-icon" onclick="toggleSideBlock(event)"></div>
-  </div>
+  </div> -->
   
   <div class="side-block">
     <div class="side-block-wrapper">
-      <img src="./gear.png" width="25" height="25" onclick="toggleSideBlock(event)">
-      <button>安裝應用程式</button>
+      <img class="side-block-icon" src="./gear.png" onclick="toggleSideBlock(event)">
+      <button class="side-block-button">安裝應用程式</button>
     </div>
   </div>
 <script>
 
-  document.addEventListener('click', function(e) {
-    hideSideBlock()
-  })
+  // document.addEventListener('click', function(e) {
+  //   hideSideBlock()
+  // })
 
-  function showSideBlock() {
+  // function showSideBlock() {
 
-    event.stopPropagation()
+  //   event.stopPropagation()
 
-    const sideBlock = document.querySelector('.side-block')
-    sideBlock.classList.add('side-block-show')
-  }
+  //   const sideBlock = document.querySelector('.side-block')
+  //   sideBlock.classList.add('side-block-show')
+  // }
 
-  function hideSideBlock() {
-    const sideBlock = document.querySelector('.side-block')
-    sideBlock.classList.remove('side-block-show')
-  }
+  // function hideSideBlock() {
+  //   const sideBlock = document.querySelector('.side-block')
+  //   sideBlock.classList.remove('side-block-show')
+  // }
 
   function toggleSideBlock(event) {
-    // 為了不讓 body.click 被觸發 順序: 捕獲 body => 捕獲此元素(在這就不往後傳) => 冒泡此元素 => 冒泡 body
-    event.stopPropagation()
+    const sideBlockIcon = document.querySelector('.side-block-icon')
+    const sideBlockButton = document.querySelector('.side-block-button')
+    
+    // 若圖片可能變動大小，可以設置下面這段，讓按鈕跟圖片高度一樣
+    // sideBlockButton.style.height = sideBlockIcon.offsetHeight + 'px'
 
-    const sideBlock = document.querySelector('.side-block')
-    sideBlock.classList.add('side-block-show')
+    sideBlockButton.classList.toggle('button-show')
   }
 </script>
 </body>
