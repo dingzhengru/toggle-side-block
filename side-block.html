@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Toggle Side Block</title>
+
+  <link rel="stylesheet" type="text/css" href="./side-block.css">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <meta name=viewport content="width=720"> -->
+
+</head>
+<body>
+  <!-- <button onclick="toggleSideBlock(event)">Toggle</button>
+  <button onclick="showSideBlock()">Show</button>
+  <button onclick="hideSideBlock()">Hide</button> -->
+
+  <!-- <div class="side-block-toggle"> 
+    <div class="side-block-toggle-icon" onclick="toggleSideBlock(event)"></div>
+  </div> -->
+  
+  
+  <div class="side-block">
+    <img class="side-icon" src="./gear.png" onclick="toggleSideBlock()">
+    <button class="side-button" onclick="deferredPrompt ? deferredPrompt.prompt() : null">安裝應用程式</button>
+  </div>
+
+  <!-- <div class="side-block">
+    <div class="side-block-wrapper">
+      <img class="side-block-icon" src="./gear.png" onclick="toggleSideBlock()">
+      <button class="side-block-button" onclick="deferredPrompt ? deferredPrompt.prompt() : null">安裝應用程式</button>
+    </div>
+  </div> -->
+<script>
+
+  // document.addEventListener('click', function(e) {
+  //   hideSideBlock()
+  // })
+
+  // function showSideBlock() {
+
+  //   event.stopPropagation()
+
+  //   const sideBlock = document.querySelector('.side-block')
+  //   sideBlock.classList.add('side-block-show')
+  // }
+
+  // function hideSideBlock() {
+  //   const sideBlock = document.querySelector('.side-block')
+  //   sideBlock.classList.remove('side-block-show')
+  // }
+
+  let deferredPrompt;
+
+  // window.addEventListener('load', () => {
+  //   // 用 js 去給 side-block.style.right 屬性 (會是 button 的寬度的負數)
+  //   const sideBlock = document.querySelector('.side-block')
+  //   const sideBlockButton = document.querySelector('.side-button')
+
+  //   console.log(sideBlock, `-${ sideBlockButton.offsetWidth }px`)
+
+  //   sideBlock.style.right = `-${ sideBlockButton.offsetWidth }px`
+  // })
+
+  function toggleSideBlock() {
+    const sideBlock = document.querySelector('.side-block')
+    const sideBlockIcon = document.querySelector('.side-icon')
+    const sideBlockButton = document.querySelector('.side-button')
+    
+    // 若圖片可能變動大小，可以設置下面這段，讓按鈕跟圖片高度一樣
+    // sideBlockButton.style.height = sideBlockIcon.offsetHeight + 'px'
+
+    console.log(sideBlock.offsetWidth, sideBlockIcon.offsetWidth, sideBlockButton.offsetWidth)
+
+
+    sideBlock.classList.toggle('show-button')
+
+  }
+</script>
+</body>
+</html>

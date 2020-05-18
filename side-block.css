@@ -2,27 +2,86 @@ html{
   font-size: 13px "Microsoft JhengHei", Arial, Helvetica, sans-serif;
 }
 
+
 .side-block {
+  position: fixed;
+  top: 30%;
+  
+  right: -157px;
+
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+
+  /*background: red;*/
+  white-space: nowrap;
+  overflow: none;
+  transition: all 0.5s;
+}
+
+.show-button {
+  right: -1px;
+  transition: all 0.5s;
+}
+
+.side-block .side-icon,
+.side-block .side-button {
+  vertical-align: middle;
+  display: inline-block;
+  font-size: 1.5rem;
+  color: black;
+  background-color: white;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  user-select: none;
+  font-weight: 400;
+}
+
+.side-block .side-icon {
+  padding: 12px;
+  margin-right: -5px;
+  width: auto;
+  height: 32px;
+  border-radius: 4px 0px 0px 4px;
+}
+
+.side-block .side-button {
+  height: 58px;  /*可用 JS 去處理和圖片大小一樣*/
+
+  border-radius: 0px 0px 0px 0px;
+  text-align: left;
+}
+
+
+/*.side-block .button-show{
+  width: 100%;
+  padding: 6px;
+  transition: all 10s;
+}*/
+
+
+/*.side-block-show {
+  width: 40%;
+  transition: all 0.5s;
+}*/
+
+/*.side-block {
   position: fixed;
   top: 0;
   right: 0;
   height: 100%;
   max-width: 100%;
 
-  width: 60%;
+  width: 15%;
 
   overflow-x: hidden;
   text-align: right;
   background: transparent;
+  background: red;
   z-index: 9999;
-}
+}*/
 
-.side-block-show {
-  /*width: 40%;*/
-  /*transition: all 0.5s;*/
-}
-
-.side-block-wrapper {
+/*.side-block-wrapper {
   position: absolute;
   top: 30%;
   right: -2px;
@@ -31,7 +90,7 @@ html{
   white-space: nowrap;
   overflow: hidden;
   text-align: right;
-}
+}*/
 
 .side-block-wrapper > .side-block-icon,
 .side-block-wrapper > .side-block-button {
@@ -43,9 +102,9 @@ html{
   border: 1px solid #ccc;
   cursor: pointer;
   user-select: none;
-  /*font-weight: 400;*/
-  /*line-height: 1.42857143;*/
-  /*text-align: center;*/
+  font-weight: 400;
+  line-height: 1.42857143;
+  /*text-align: center;
   /*white-space: nowrap;*/
 }
 
@@ -60,14 +119,15 @@ html{
   padding: 12px;
   margin-right: -5px;
   width: auto;
-  height: 36px;
+  height: 32px;
+  border-radius: 4px 0px 0px 4px;
 }
 
 .side-block-wrapper .side-block-button{
   width: 0px;
   padding: 0;
 
-  height: 62px;  /*可用 JS 去處理和圖片大小一樣*/
+  height: 58px;  /*可用 JS 去處理和圖片大小一樣*/
 
   border-radius: 0px 0px 0px 0px;
   text-align: left;
